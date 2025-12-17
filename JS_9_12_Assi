@@ -1,0 +1,258 @@
+#section 1 -- List Basics
+print("\n\nLIST =>")
+
+  #1 list in python
+my_list = [33, 'Anagha', 5.30]
+print(my_list)
+
+  #2 create an empty list
+empty_list = []
+print(empty_list)
+
+ #3 lenght of list
+list1 = [33, 'Anagha', 5.30]
+print(len(list1))
+
+ #4 1st ele of list
+print(list1[0])
+
+#5 last ele
+print(list1[-1])
+
+#6 slice a list
+print(list1[0:2])
+
+#7 append ele
+list1.append('Tilwani')
+print(list1)
+
+#8 insert ele
+list1.insert(1, "Hello")
+print(list1)
+
+#9 remove ele
+list1.remove("Tilwani")
+print(list1)
+
+#10 delete
+list1.pop(1)
+print(list1)
+
+#11 sort a lst
+list2 = [52,16,17,11,92,68,16]
+list2.sort()
+print(list2)
+
+# 12 reverse
+list3 = [11, 22, 33, 44, 55]
+print("orignal list3", list3)
+list3.reverse()
+print(list3)
+
+#13 check value exits or not
+if 11 in list2:
+    print('yes')
+else:
+    print('no')
+
+#14 extend 1lst with another list
+list2.extend([10,20])
+print(list2)
+
+#15 copy lst
+new_list = list1.copy()
+print(new_list)
+
+#==========================================================================
+
+#section 2 - TUPLES
+
+#16 a tuple is ordered but immutable(cannot be changed).
+print("\n\nTUPLES =>")
+
+#17 create t
+t = (1, 2, 3)
+print(t)
+
+#18 single ele t
+t1 =(4,)
+print(t1)
+
+#19 access t ele
+print(t[1])
+
+#20 modify t (no. tuples are immutable)
+
+#21 convert t to lst
+list3 = (list(t))   # convert tuple → list
+print(list3)
+
+# #22 lst to t
+t = tuple(list3)
+print(t)
+
+#================================================================
+
+#Section 3 - RANGE
+print("\n\nRANGE=>")
+
+#23 what dose range(5) generate
+for i in range(5):
+    print(i)
+
+# 24 range(start, stop)
+print(list(range(2, 6)))
+
+#25 r(start. stop, step)
+print(list(range(1, 20, 3)))
+
+#=========================================================================
+
+#Section 3 - FOR LOOPS
+print("\n\nFOR LOOPS=>")
+
+#26 NO. 1 to 5
+for i in range(1, 6):
+    print(i)
+
+#27 all ele in list.
+print("\n27 elements in list2")
+for x in list3:
+    print(x)
+
+#28 sum all no. in a list
+print("\nsum all no. in a list")
+total = 0
+for n in list3:
+    total += n
+    print(total)
+
+#29 print even
+for n in list3:
+    if n % 2 == 0:
+        print("\neven ",n)
+
+#30 count ele using loop
+lst = [1, 2, 3, 4, 5]
+print("count ele using loop-")
+count = 0
+for _ in lst:
+     count += 1
+     print(count)
+
+#31 simple condition
+x = 20
+if x > 10:
+    print("\nsimple condition => big no.")
+
+#32 if-else eg
+a = 15
+if a % 2 == 0:
+    print("\nif-else eg-> Even")
+else:
+    print("\nif-else eg-> odd")
+
+#33 lf-elif-else
+score = 92
+if score >= 90:
+    grade = "A"
+elif score >= 75:
+    grade = "B"
+else:
+    grade = "C"
+
+
+#34 multi condition
+age = 20
+citizen ='yes'
+if age > 18 and citizen:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+#35 membership test
+if 3 in [1,2,3]:
+    print("found")
+
+#================================================================
+#Section 6 -STRING BASICS
+print("\n\nSTRING BASICS=>")
+
+#36 str len
+len("Anagha")
+print(len("Anagha"))
+
+#37 upper case
+s = 'Anagha'
+print(s.upper())
+
+#38 string starts with a letter
+s1 = 'Ankita'
+print(s1.startswith('A'))
+
+#39 replace a word
+sentence = "I like apples"
+new_sentence = sentence.replace("apples", "mangoes")
+print(new_sentence)
+
+#40 split a string
+s2 = "Anagha Gajanan Harshe"
+words = s2.split()
+print(words)
+
+#=============================================================================
+#Section 7 -MORE LIST METHOD QUESTIONS
+
+#41 clear a list
+lst1 = [1,2,3,4,5]
+print(lst1)
+lst1.clear()
+print(lst1)
+
+#42 count occurrences
+lst2 = [11, 22, 33, 22, 55, 44]
+print(lst2.count(22))
+
+#43 index
+print(lst2.index(55))
+
+#44 remove
+lst2.pop(3)
+print(lst2)
+
+#44 remove last element
+lst2.pop(-1)
+print(lst2)
+
+#45 concatenate list
+lst4 = [11, 12]
+lst5 = [21, 22]
+lst6 = lst4 + lst5
+print(lst6)
+
+#46 multiply
+lst7= [1, 2] *3
+print(lst7)
+
+#47 check list empty
+lst8 =[ ]
+if not lst8:
+    print("empty")
+
+#48 loop with index and value together
+print("loop with index and value together->")
+list4 = ['anagha', 11, 3.14]
+for i, val in enumerate(list4):
+    print(i, val)
+
+#49 max min value
+print("max value in the list 8",max(lst2))
+print("max value in the list 8",min(lst2))
+
+#50 append and extend
+lst8 = [11,12,13]
+lst8.append([14, 15])
+print(lst8)
+
+lst8.extend([16, 17])
+print(lst8)
